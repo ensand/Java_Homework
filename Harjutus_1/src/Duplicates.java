@@ -1,8 +1,9 @@
+//Ülesanne 7
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-//Ülesanne 7
 public class Duplicates {
 
     public static int duplicateCount(ArrayList<Integer> numList, int num){

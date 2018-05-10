@@ -1,3 +1,5 @@
+//Ülesanne 29
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -39,29 +41,29 @@ public class Replacer {
 
 //            line = line.replaceAll(replaceable, replacer);
 
-            try {
-                FileWriter fw = new FileWriter(fileName);
-                BufferedWriter writer = new BufferedWriter(fw);
+        try {
+            FileWriter fw = new FileWriter(fileName);
+            BufferedWriter writer = new BufferedWriter(fw);
 
-                for (String line : text) {
-                    writer.write(line.replaceAll(replaceable, replacer));
-                    writer.newLine();
-                }
-
-                writer.flush();
-                writer.close();
-            } catch (IOException e){
-                e.printStackTrace();
+            for (String line : text) {
+                writer.write(line.replaceAll(replaceable, replacer));
+                writer.newLine();
             }
 
-            //System.out.println(line);
+            writer.flush();
+            writer.close();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+        //System.out.println(line);
 
     }
 
 
     public static void main(String[] args) throws IOException{
 
-        replacer(readFile("text.txt"), "wand", "penis", "text.txt");
+        replacer(readFile("text.txt"), "wand", "magic stick", "text.txt");
 
     }
 }
